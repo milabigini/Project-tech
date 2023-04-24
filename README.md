@@ -29,7 +29,9 @@ Als de gebruiker van …(app naam) wil ik mijn style verder kunnen ontwikkelen d
 Als de gebruiker van …(app naam) wil ik een bepaalde stijl uit proberen maar ik weet niet waar ik zal moeten zoeken.
 
 ## Requirementlist:
+* Aanmelding / registratie
+* Profiel waar jij je stijl in kan zetten
 * map hoe je er komt
 * Locaties aan kunnen geven
 * Like button
-* winkels die op jou outfits zijn gebasseerd
+* winkels die op jou outfits zijn gebasseerd (generator)
