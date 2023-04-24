@@ -31,4 +31,5 @@ Als de gebruiker van …(app naam) wil ik een bepaalde stijl uit proberen maar i
 ## Requirementlist:
 * map hoe je er komt
 * Locaties aan kunnen geven
-* 
+* Like button
+* winkels die op jou outfits zijn gebasseerd
