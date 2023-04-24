@@ -30,8 +30,10 @@ Als de gebruiker van …(app naam) wil ik een bepaalde stijl uit proberen maar i
 
 ## Requirementlist:
 * Aanmelding / registratie
-* Profiel waar jij je stijl in kan zetten
-* map hoe je er komt
-* Locaties aan kunnen geven
+* Profiel waar jij je stijl en voorkeuren in kan zetten
+* Swipe functie (tinder-idee)
+* Maps
+* Locaties button
 * Like button
-* winkels die op jou outfits zijn gebasseerd (generator)
+* Winkels die op jou outfits zijn gebasseerd (generator)
+* Profielen met informatie/link
