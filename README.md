@@ -5,3 +5,8 @@ Gebruiker wil of heeft een bepaalde stijl die hij verder wil gaan ontwikkelen. D
 
 ## Uitgewerkte requirement
 De gebruiker kiest uit een lijst met hashtags, uit de gekozen hashtags komt er een swipe functie met winkels die de zelfde hashtags hebben.
+
+## Licentie
+# license preferred by the community
+Als licentie heb ik gekozen voor "license preferred by the community" Dit is een licentie die in het algemeen gebruikt wordt. Deze licentie sluit aan de normen en verwachtingen van de meeste mensen. Andere mensen kunnen bijdragen aan mijn code deze licentie word ook wel genoemd "i need to work in a comunity" 
+
