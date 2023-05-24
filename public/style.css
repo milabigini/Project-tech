@@ -1,0 +1,55 @@
+body {
+  background-color: #BDCFE1;
+  font-family: system-ui;
+}
+
+#image-container {
+  display: flex;
+  grid-gap: 1em;
+  height: 425px;
+  overflow: auto;
+  margin-top: 3em;
+}
+
+#image-container > img {
+  background-color: white;
+  padding: 2em;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+body > p {
+  font-family: system-ui;
+    margin-bottom: 28px;
+}
+
+label {
+  background-color: white;
+  padding: 4px;
+  padding-right: 1em;
+  border-radius: 4em;
+  margin-right: 43PX;
+}
+
+#weather{
+  position: absolute;
+  top: 13px;
+  right: 47px;
+  color: white;
+  font-weight: bold;
+}
+
+#weatherIcon{
+  position: absolute;
+  top: -15em;
+  right: 4px;
+  width: 5em;
+  transform: scale(0.1);
+}
+
+.Kawaii {
+  display: none;
+}
+
+
+

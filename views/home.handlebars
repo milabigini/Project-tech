@@ -1,0 +1,47 @@
+
+<head>
+    
+</head>
+<body>
+
+   <h1>Style sync</h1>
+    <p>Do you want to find the perfect store for your style? Choose the ones that you are interested in and get differet stores where you can explore!</p>
+<div id="alles">
+<label>
+  <input type="checkbox" value="Streetwear" class="hashtag-checkbox" > Streetwear 
+
+</label>
+<label >
+  <input type="checkbox" value="Vintage" id="vintage" class="hashtag-checkbox"> Vintage
+  
+</label>
+
+
+<label>
+  <input type="checkbox" value="Kawaii" class="hashtag-checkbox" onchange="togglePlace(event)"> Kawaii
+</label>
+
+<section class="Kawaii" id="placeSection">
+  {{Place}}
+</section>
+</div>
+<div id="image-container" ></div>
+
+ 
+<button  src="/gekozen" id="doorgaan">Doorgaan</button>
+
+
+
+
+
+<div id="weatherIcon"> </div>
+{{!-- voor de api --}}
+<div id="weather"> </div>
+<script src="index.js"></script>
+
+</body>
+
+    <footer></footer> 
+
+
+

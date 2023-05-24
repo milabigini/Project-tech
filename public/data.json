@@ -1,0 +1,24 @@
+{
+
+    "data": {
+
+      "Winkel1": {
+
+        "Name": "T0K10Store",
+
+        "Place": "Rotterdam"
+
+      },
+
+      "Winkel2": {
+
+        "Name": "winkel",
+
+        "Place": "locatie"
+
+      }
+      
+
+    }
+
+}
