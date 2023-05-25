@@ -15,6 +15,3 @@ Toestemming om deze software te gebruiken, te kopiëren, te wijzigen en/of te ve
 
 DE SOFTWARE WORDT GELEVERD "ZOALS HIJ IS" EN DE AUTEUR WIJST ALLE GARANTIES MET BETREKKING TOT DEZE SOFTWARE AF, INCLUSIEF ALLE IMPLICIETE GARANTIES VAN VERKOOPBAARHEID EN GESCHIKTHEID. IN GEEN GEVAL IS DE AUTEUR AANSPRAKELIJK VOOR ENIGE SPECIALE, DIRECTE, INDIRECTE OF GEVOLGSCHADE OF WELKE SCHADE DAN OOK ALS GEVOLG VAN VERLIES VAN GEBRUIK, GEGEVENS OF WINST, HETZIJ IN EEN CONTRACTUELE HANDELING, NALATIGHEID OF ANDERE ONRECHTMATIGE DAAD, VOORTVLOEIEND UIT OF IN VERBAND MET HET GEBRUIK OF DE PRESTATIES VAN DEZE SOFTWARE.
 
-## Linter
-
-Eslint is een code analyse tool om problemen te identificeren in javascript code. Eslint is gemaakt door Nicholas Zakas in 2013. ESLint kunnen regels identificeren en laden en het is makkelijk aanpasbaar. ESLint behandelt zowel codekwaliteit als codeerstijlproblemen. Je kon aangeven hoe jij nette code schrijft en met welke onderdelen je werkt. Via je terminal kun je "npx eslint .." intypen en dan zal je de errors in je codes zien, vanuit hier kun je nette code schrijven.
