@@ -19,7 +19,10 @@ DE SOFTWARE WORDT GELEVERD "ZOALS HIJ IS" EN DE AUTEUR WIJST ALLE GARANTIES MET 
 Dit is de eerste pagina die de gebruiker zal zien. Rechtsboven in staat eeb weather api zodat de gebruiker kan zien wat voor weer het is.
 <img width="785" alt="Schermafbeelding 2023-05-25 om 13 22 44" src="https://github.com/milabigini/Project-tech/assets/92277795/e9887d69-50f9-4b01-b191-2fbdb53b14ec">
 De gebruiker kan uit verschillende stylen kiezen door op de checkboxes te klikken. De checkboxen zijn gelinkt aan de afbeeldingen. De gebruiker kan dan door de verschillende afbeeldingen swipen.
+
 <img width="770" alt="Schermafbeelding 2023-05-25 om 13 23 02" src="https://github.com/milabigini/Project-tech/assets/92277795/ef39fe73-3b6c-4610-aca3-74e295810587">
+
 De "doorgaan" knop zal de gebruiker lijden naar de tweede pagina. Hier kan de gebruiker de winkel informatie vinden. Uiteindelijk zullen de afbeeldingen daar worden weergegeven.
-<img wid<img width="299" alt="Schermafbeelding 2023-05-25 om 13 29 11" src="https://github.com/milabigini/Project-tech/assets/92277795/a460b84b-4c8d-4a01-b9f2-3090ef078e13">
-th="88" alt="Schermafbeelding 2023-05-25 om 13 29 25" src="https://github.com/milabigini/Project-tech/assets/92277795/af68b1d1-ddac-402c-8e17-1868af00e6a8">
+
+<img width="88" alt="Schermafbeelding 2023-05-25 om 13 29 25" src="https://github.com/milabigini/Project-tech/assets/92277795/b654c39c-f10b-479c-ad6c-6ed7ed1b7ce4">
+<img width="299" alt="Schermafbeelding 2023-05-25 om 13 29 11" src="https://github.com/milabigini/Project-tech/assets/92277795/fa28db6e-2975-4349-a885-94679889b533">
