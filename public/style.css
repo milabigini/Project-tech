@@ -3,7 +3,7 @@ body {
   font-family: system-ui;
 }
 
-#image-container {
+#selectedImagesContainer {
   display: flex;
   grid-gap: 1em;
   height: 425px;
@@ -11,9 +11,10 @@ body {
   margin-top: 3em;
 }
 
-#image-container > img {
+
+
+#selectedImagesContainer > img {
   background-color: white;
-  padding: 2em;
   padding: 0.5em;
   border-radius: 2em;
 }
@@ -47,9 +48,7 @@ label {
   transform: scale(0.1);
 }
 
-.Kawaii {
-  display: none;
+#AantalSection {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
-
-
-

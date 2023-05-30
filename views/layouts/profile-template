@@ -1,7 +1,0 @@
-{{!-- <script id="profile-template" type="text/x-handlebars-template">
-    <div class="profile">
-        <h2>{{name}}</h2>
-        <p>Age: {{age}}</p>
-        <p>Interests: {{interests}}</p>
-    </div>
-</script> --}}

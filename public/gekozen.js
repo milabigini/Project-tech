@@ -1,32 +1,16 @@
-// Haal de waarde van de queryparameter op
-const urlParams = new URLSearchParams(window.location.search);
-const checkboxStatus = urlParams.get('checkboxStatus');
+// Haal de geselecteerde afbeeldingen op uit de sessieopslag
+var selectedImages = JSON.parse(sessionStorage.getItem('selectedImages'));
 
-// Controleer de status van de checkbox
-if (checkboxStatus === 'aangevinkt') {
-    
-  // Checkbox is aangevinkt
-  
-  fetch("data.json")
-  .then(res => res.json())
-  .then(json => {
-    const winkel1 = json.data.Winkel1;
-    const name = winkel1.Name;
-    const place = winkel1.Place;
-
-    document.getElementById("Winkel1-name").innerText = name;
-    document.getElementById("Winkel1-place").innerText = place;
-  })
-//   .catch(err => {
-//     console.error("Er is een fout opgetreden bij het ophalen en verwerken van de JSON:", err);
-//   });
-
-  const gekozenDataElement = document.getElementById('gekozen-data');
-  gekozenDataElement.innerText = 'Checkbox is aangevinkt';
+//kijkt of er een afbeelding langer dan 0 is, als er een afbeelding is wordt het met id 'selectedImagesContainer' opgehaald.
+if (selectedImages && selectedImages.length > 0) {
+  var selectedImagesContainer = document.getElementById('selectedImagesContainer'); // Haalt het element met id 'selectedImagesContainer' op
+  selectedImages.forEach(function (image) {
+    var imgElement = document.createElement('img'); // Maakt een nieuw img-element aan
+    imgElement.src = image.src; // Stelt de bron van het img-element in op basis van de src van de geselecteerde afbeelding
+    selectedImagesContainer.appendChild(imgElement); // Voegt het img-element toe als een kind van selectedImagesContainer
+  });
 } else {
-  // Checkbox is niet aangevinkt
-  // Voer hier de code uit om te reageren op de niet-aangevinkte status
-  const gekozenDataElement = document.getElementById('gekozen-data');
-  gekozenDataElement.innerText = 'Checkbox is niet aangevinkt';
+  var noImagesElement = document.createElement('p'); // Maakt een nieuw p-element aan
+  noImagesElement.textContent = 'Er zijn geen geselecteerde afbeeldingen.'; // Stelt de tekst van het p-element in
+  document.getElementById('selectedImagesContainer').appendChild(noImagesElement); // Voegt het p-element toe als een kind van het element met id 'selectedImagesContainer'
 }
-

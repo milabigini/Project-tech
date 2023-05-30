@@ -1,113 +1,77 @@
-
-//het importeren van ...
-import express from "express"
-import { engine } from "express-handlebars";
-import mongoose from "mongoose";
-import dotenv from 'dotenv';
+// Het importeren van modules en pakketten
+import express from "express"; // Express framework voor het bouwen van de server
+import { engine } from "express-handlebars"; // Templating engine voor het renderen van views
+import mongoose from "mongoose"; // Mongoose voor het beheren van MongoDB-database
+import dotenv from 'dotenv'; // Pakket voor het lezen van een .env bestand
 
 const app = express();
 
-
-//.env (wachtwoord)
-//door config worden de bestand van dotenv gelezen
 dotenv.config();
-//Hij laadt de veriabelen en kunnen toegang krijgen via process.env hier uit komt de mangodb uri
-mongoose.connect(process.env.MONGODB_URI, {
-//nmp run start en zie je een bericht
-}).then(() => {
-  console.log('Verbonden met MongoDB');
-}).catch((error) => {
-  console.error('Fout bij verbinden met MongoDB:', error);
-});
 
+// Verbinding maken met de MongoDB-database met behulp van de MONGODB_URI (env.)
+mongoose.connect(process.env.MONGODB_URI, {})
+  .then(() => {
+    console.log('Verbonden met MongoDB');
+  })
+  .catch((error) => {
+    console.error('Fout bij verbinden met MongoDB:', error);
+  });
 
-
-
-//mongoose//
+// de verschillende onderdelen die ik vanuit de database op wil halen
 const Schema = mongoose.Schema;
-
 const userSchema = new Schema({
-
-
-Category: { type: String, required: true },
-
-Shop: { type: String, required: true },
-
-Place: { type: String, required: true },
-
-Image: { type: String, required: true },
-
+  Category: { type: String, required: true },
+  shop: { type: String, required: true },
+  Aantal: { type: String, required: true },
+  info: { type: String, required: true },
 });
-
 const Shop = mongoose.model('Shop', userSchema);
-
-
-
-
-
-
-
-
-
-
-
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-
-
-
-
-
-app.use(express.static('static'))
-
+// Definitie van verschillende routes
 app.get('/', function (req, res) {
-    res.send('Hallo wereld Mila!!!!!! :) <3')
-  })
-  
-  
-  app.get('/swipe', function (req, res) {
-    res.send('swipe je kleding')
-  })
-  
-  app.get('/account', function (req, res) {
-    res.send('dit is jouw account')
-  })
-  
-
-  app.get('/likes', function (req, res) {
-    res.send('jouw gelikte items')
-  })
-
-// als je een functie hebt en je wil await gebruiken moet ervoor async staan (anders doet die het niet)
-// we zoeken een shop die de cato kawaii heeft
-app.get('/home', async (req, res) => {
-    const shop = await Shop.findOne({Category:"Kawaii"})
-    res.render('home',shop
-    );
+  res.send('Hallo wereld Mila!!!!!! :) <3');
 });
 
+// Data route voor het ophalen van winkelgegevens op basis van categorie en aantal
+app.get('/data', async (req, res) => {
+  let categoryQuery = {}; // Lege query voor categorie
+  let AantalQuery = {}; // Lege query voor aantal
 
+  if (req.query.kawaii) {
+    categoryQuery = { Category: "Kawaii" };
+  }
 
+  if (req.query.vintage) {
+    AantalQuery = { Category: "Vintage" };
+  }
+
+  if (req.query.streetwear) {
+    AantalQuery = { ...AantalQuery, Category: "Streetwear" };
+  }
+
+  const shop = await Shop.findOne(categoryQuery).findOne(AantalQuery);
+  res.render('data', shop);
+});
+
+// Home route
+app.get('/home', (req, res) => {
+  res.render('home');
+});
+
+// Statische bestanden (bijv. CSS) worden geserveerd vanuit de "public" map
 app.use(express.static('public'));
-
 
 app.get('/gekozen', (req, res) => {
   res.render('gekozen');
 });
 
-  app.get('*', function(req, res){
-    res.status(404).send('error, what???');
-  });
-  
- 
+app.get('/error', (req, res) => {
+  res.render('error');
+});
 
+// De server luistert op poort 3000
 app.listen(3000);
-
-
-
-
-
-
