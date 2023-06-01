@@ -1,49 +1,49 @@
 body {
-  background-color: #BDCFE1;
+
   font-family: system-ui;
+  background-color: black;
 }
 
-#selectedImagesContainer {
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+
+#checkboxes {
   display: flex;
-  grid-gap: 1em;
-  height: 425px;
-  overflow: auto;
-  margin-top: 3em;
+  flex-direction: column;
 }
 
-
-
-#selectedImagesContainer > img {
-  background-color: white;
-  padding: 0.5em;
-  border-radius: 2em;
-}
-
-body > p {
+body>p {
   font-family: system-ui;
-    margin-bottom: 28px;
+  margin-bottom: 1.75em;
 }
 
 label {
   background-color: white;
-  padding: 4px;
+  padding: 0.25em;
   padding-right: 1em;
   border-radius: 4em;
-  margin-right: 43PX;
+  margin-right: 2.69em;
+  margin-bottom: 2em;
 }
 
-#weather{
+#weather {
   position: absolute;
-  top: 13px;
-  right: 47px;
+  top: 1.81em;
+  right: 2.94em;
   color: white;
   font-weight: bold;
 }
 
-#weatherIcon{
+#weatherIcon {
   position: absolute;
-  top: -15em;
-  right: 4px;
+  top: -14em;
+  right: 0.25em;
   width: 5em;
   transform: scale(0.1);
 }
@@ -51,4 +51,93 @@ label {
 #AantalSection {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+#banner {
+  width: 126%;
+  margin-left: -2em;
+  margin-top: -1em;
+}
+
+#banner-text {
+  margin-top: -1em;
+  text-align: center;
+  background-color: white;
+  width: 15em;
+  margin-left: -1em;
+  font-size: 1.88em;
+  color: black;
+}
+
+#styleText {
+  margin-top: -1em;
+  color: hotpink;
+}
+
+#AantalSection {
+  color: white;
+  margin-top: -1em;
+  margin-top: -1em;
+  margin-bottom: -0.5em;
+}
+
+button {
+  width: 107%;
+  height: 3em;
+  color: hotpink;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#doorgaanButton {
+  display: none;
+}
+
+/* matched pagina */
+
+#match-text {
+  color: black;
+  background-color: white;
+  padding: 1em;
+  margin-left: -1em;
+  width: 23em;
+}
+
+#selectedImagesContainer {
+  display: flex;
+  grid-gap: 1em;
+  height: 20.81em;
+  overflow: auto;
+  margin-top: 3em;
+}
+
+#selectedImagesContainer>img {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+#javascript-disabled {
+  color: deeppink;
+}
+
+#images {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: -3em;
+  display: grid;
+}
+
+#images>img {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  padding: 0.5em;
+}
+
+/* error page */
+#error{
+  background-image: url(404.jpg);
+  background-repeat: no-repeat;
+  background-size: 24em;
+  background-color: #CCCCCC;
 }

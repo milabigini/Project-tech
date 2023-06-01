@@ -1,18 +1,19 @@
 // Weather Image
-var imageElement = document.createElement('img'); // Maakt een nieuw img-element aan
-imageElement.src = 'weather.png'; 
-imageElement.alt = 'Alternatieve tekst van de afbeelding'; 
+const imageElement = document.createElement('img');
+imageElement.src = 'weather.png';
 
-var weatherDiv = document.getElementById('weatherIcon');
-weatherDiv.appendChild(imageElement); // Voegt het img-element toe als een kind van weatherDiv
+const weatherDiv = document.getElementById('weatherIcon');
+weatherDiv.appendChild(imageElement);
 
 // Weather API Fetch
 fetch("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=bd5e378503939ddaee76f12ad7a97608")
-  .then(res => res.json()) // Converteert de response naar JSON
-  // Verkrijgt de weersinformatie en stelt deze in als tekst van het element met id 'weather'
-  .then(json => document.getElementById("weather").innerText = json.weather[0].main);
+  .then(res => res.json())
+  .then(json => {
+    const weatherElement = document.getElementById("weather");
+    weatherElement.innerText = json.weather[0].main;
+});
 
-// Checkbox Filtering
+// Checkbox Filtering data
 const kawaiiCheckbox = document.getElementById('kawaiiCheckbox');
 const vintageCheckbox = document.getElementById('vintageCheckbox');
 const streetwearCheckbox = document.getElementById('streetwearCheckbox');
@@ -23,113 +24,116 @@ vintageCheckbox.addEventListener('change', sendRequest);
 streetwearCheckbox.addEventListener('change', sendRequest);
 
 function sendRequest() {
-  const params = new URLSearchParams(); // Maakt een nieuwe URLSearchParams-object = je kan weizigen, verwijderen en toevoegen.
+  const params = new URLSearchParams();
 
   if (kawaiiCheckbox.checked) {
-    params.set('kawaii', 'true'); // Voegt 'kawaii' toe
+    params.set('kawaii', 'true');
   }
 
   if (vintageCheckbox.checked) {
-    params.set('vintage', 'true'); 
+    params.set('vintage', 'true');
   }
 
   if (streetwearCheckbox.checked) {
-    params.set('streetwear', 'true'); 
+    params.set('streetwear', 'true');
   }
-//als geen van de checkboxes is aangevinkt, wordt de tekst getoond "choose a style" 
+
   if (!kawaiiCheckbox.checked && !vintageCheckbox.checked && !streetwearCheckbox.checked) {
-    styleText.style.display = 'block'; // Toont de tekst
-    const AantalSection = document.getElementById('AantalSection');//id van het onderdeel  in html
-    AantalSection.innerHTML = ''; // Leegt de inhoud
+    styleText.style.display = 'block';
+    const AantalSection = document.getElementById('AantalSection');
+    AantalSection.innerHTML = '';
   } else {
-    styleText.style.display = 'none'; // Verbergt de tekst
-    fetch('/data?' + params.toString()) // haalt de pagina data op
+    styleText.style.display = 'none';
+    fetch('/data?' + params.toString())
       .then(response => response.text())
       .then(html => {
         const AantalSection = document.getElementById('AantalSection');
         AantalSection.innerHTML = '';
         AantalSection.innerHTML = html;
-      })
+      });
   }
 }
 
 // Image Filtering gekoppeld met html
-var images = [
+const images = [
   { src: 'T0K10Store.png', hashtags: ['Streetwear'] },
-  { src: 'OALLERY.png', hashtags: ['Streetwear']},
-  { src: 'ThriftTale.png', hashtags: ['Vintage']},
+  { src: 'OALLERY.png', hashtags: ['Streetwear'] },
+  { src: 'ThriftTale.png', hashtags: ['Vintage'] },
   { src: 'VIND.png', hashtags: ['Vintage'] },
-  { src: 'kamoji.png', hashtags: ['Kawaii']},
-  { src: 'Nishi.png', hashtags: ['Kawaii']}
+  { src: 'kamoji.png', hashtags: ['Kawaii'] },
+  { src: 'Nishi.png', hashtags: ['Kawaii'] }
 ];
 
 function filterImages(hashtag) {
-  filteredImages = images.filter(function (image) {
-    return image.hashtags.includes(hashtag); // Filtert de afbeeldingen op basis van de hashtags
-  });
+  filteredImages = images.filter(image => image.hashtags.includes(hashtag));
   currentIndex = 0;
   showImage();
 }
-//showNextImage() = volgende afbeelding door de huidige index te verhogen met 1 Daarna wordt de showImage() functie aangeroepen om de afbeelding met de nieuwe index weer te geven. 
-//de user kan herhaaldelijk op de knop klikken om de afb aan te roepen.
+
 function showNextImage() {
-  currentIndex = (currentIndex + 1) % filteredImages.length;     
+  currentIndex = (currentIndex + 1) % filteredImages.length;
   showImage();
 }
 
 function showImage() {
-  var imageElement = document.getElementById('image');
-  var imageContainer = document.getElementById('imageContainer');
+  const imageElement = document.getElementById('image');
+  const imageContainer = document.getElementById('imageContainer');
+
   if (filteredImages.length > 0) {
-    var currentImage = filteredImages[currentIndex]; // Haalt de huidige afbeelding op basis van de huidige index
-    imageElement.src = currentImage.src; // Stelt de bron van het afbeeldingselement in
-    imageContainer.style.display = 'block'; // Toont het afbeeldingscontainer-element
+    const currentImage = filteredImages[currentIndex];
+    imageElement.src = currentImage.src;
+    imageContainer.style.display = 'block';
   } else {
-    imageContainer.style.display = 'none'; // Verbergt het afbeeldingscontainer-element als er geen afbeeldingen zijn
+    imageContainer.style.display = 'none';
   }
 }
 
 // Hashtag Checkbox Filtering
-var checkboxList = document.querySelectorAll('.hashtag-checkbox'); // Selecteert alle elementen met de class 'hashtag-checkbox'
-
-checkboxList.forEach(function (checkbox) {
-  checkbox.addEventListener('change', function () {
-    var selectedHashtags = getSelectedHashtags(); // Haalt de geselecteerde hashtags op
-
-    filteredImages = images.filter(function (image) {
-      return selectedHashtags.some(function (hashtag) {
-        return image.hashtags.includes(hashtag); // Filtert de afbeeldingen op basis van de geselecteerde hashtags
-      });
+const checkboxList = document.querySelectorAll('.hashtag-checkbox');
+checkboxList.forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const selectedHashtags = getSelectedHashtags();
+    filteredImages = images.filter(image => {
+      return selectedHashtags.some(hashtag => image.hashtags.includes(hashtag));
     });
 
-    displayImages(filteredImages); // Toont de gefilterde afbeeldingen
+    displayImages(filteredImages);
   });
 });
 
 function getSelectedHashtags() {
-  var selectedHashtags = [];
-  checkboxList.forEach(function (checkbox) {
+  const selectedHashtags = [];
+  checkboxList.forEach(checkbox => {
     if (checkbox.checked) {
-      selectedHashtags.push(checkbox.value); // Voegt de waarde van de geselecteerde checkbox toe aan de lijst van geselecteerde hashtags
+      selectedHashtags.push(checkbox.value);
     }
   });
   return selectedHashtags;
 }
 
 function displayImages(images) {
-  var imageContainer = document.getElementById('image-container');
+  const imageContainer = document.getElementById('image-container');
+  imageContainer.innerHTML = '';
 
-  images.forEach(function (image) {
-    var imgElement = document.createElement('img');
-    imgElement.src = image.src; // Stelt de bron van het img-element in
-    imageContainer.appendChild(imgElement); // Voegt het img-element toe aan het afbeeldingscontainer-element
+  images.forEach(image => {
+    const imgElement = document.createElement('img');
+    imgElement.src = image.src;
+    imageContainer.appendChild(imgElement);
   });
 }
 
 // "Doorgaan" Button
-var doorgaanButton = document.getElementById('doorgaanButton');
-doorgaanButton.addEventListener('click', function () {
-  sessionStorage.setItem('selectedImages', JSON.stringify(filteredImages)); // Slaat de geselecteerde afbeeldingen op in de sessieopslag
-
+const doorgaanButton = document.getElementById('doorgaanButton');
+doorgaanButton.addEventListener('click', () => {
+  sessionStorage.setItem('selectedImages', JSON.stringify(filteredImages));
   window.location.href = './gekozen';
+});
+
+// Progressive Enhancement Button
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("javascript-disabled-button").style.display = "none";
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("doorgaanButton").style.display = "block";
 });

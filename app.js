@@ -1,8 +1,8 @@
 // Het importeren van modules en pakketten
-import express from "express"; // Express framework voor het bouwen van de server
-import { engine } from "express-handlebars"; // Templating engine voor het renderen van views
-import mongoose from "mongoose"; // Mongoose voor het beheren van MongoDB-database
-import dotenv from 'dotenv'; // Pakket voor het lezen van een .env bestand
+import express from "express";
+import { engine } from "express-handlebars";
+import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
 const app = express();
 
@@ -31,15 +31,18 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+// Statische bestanden (bijv. CSS) worden geserveerd vanuit de "public" map
+app.use(express.static('public'));
+
 // Definitie van verschillende routes
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('Hallo wereld Mila!!!!!! :) <3');
 });
 
 // Data route voor het ophalen van winkelgegevens op basis van categorie en aantal
 app.get('/data', async (req, res) => {
-  let categoryQuery = {}; // Lege query voor categorie
-  let AantalQuery = {}; // Lege query voor aantal
+  let categoryQuery = {};
+  let AantalQuery = {};
 
   if (req.query.kawaii) {
     categoryQuery = { Category: "Kawaii" };
@@ -62,14 +65,11 @@ app.get('/home', (req, res) => {
   res.render('home');
 });
 
-// Statische bestanden (bijv. CSS) worden geserveerd vanuit de "public" map
-app.use(express.static('public'));
-
 app.get('/gekozen', (req, res) => {
   res.render('gekozen');
 });
 
-app.get('/error', (req, res) => {
+app.get('/*', (req, res) => {
   res.render('error');
 });
 
