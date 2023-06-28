@@ -1,72 +1,104 @@
-body {
-
-  font-family: system-ui;
-  background-color: black;
+@font-face {
+  font-family: "FallbackFont";
+  src: local("Arial"), local("sans-serif");
 }
 
-h1 {
+body,
+header,
+h1,
+p {
+  font-family: "Arial", "FallbackFont", sans-serif;
+}
+
+body {
+  background-color: black;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+h1,
+p {
   color: white;
+  text-align: center;
 }
 
 p {
-  color: white;
-}
-
-
-#checkboxes {
-  display: flex;
-  flex-direction: column;
-}
-
-body>p {
-  font-family: system-ui;
   margin-bottom: 1.75em;
 }
 
-label {
+a {
+  text-align: center;
+  background-color: white;
+  color: hotpink;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.home {
+  overflow: hidden;
+}
+
+.home > section:first-child > img {
+  width: 115%;
+  margin-left: -2em;
+  margin-top: -1em;
+}
+
+.home > section:first-child > p {
+  margin-top: -1em;
+  text-align: center;
+  background-color: white;
+  margin-left: -1em;
+  margin-right: -1em;
+  font-size: 1.88em;
+  color: black;
+}
+
+.home > section > h2 {
+  display: none;
+}
+
+.home > section > fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-left: -1em;
+  margin-right: -3.5em;
+}
+
+.home > section > fieldset > div {
+  margin-bottom: 1em;
   background-color: white;
   padding: 0.25em;
   padding-right: 1em;
   border-radius: 4em;
   margin-right: 2.69em;
-  margin-bottom: 2em;
 }
 
-#weather {
-  position: absolute;
-  top: 1.81em;
-  right: 2.94em;
-  color: white;
+.home > section > fieldset > div > button {
+  width: 27%;
+  height: 1.5em;
+  float: right;
+  border-radius: 1em;
+  color: hotpink;
   font-weight: bold;
+  font-size: 1em;
+  border-color: hotpink;
 }
 
-#weatherIcon {
-  position: absolute;
-  top: -14em;
-  right: 0.25em;
-  width: 5em;
-  transform: scale(0.1);
+#doorgaanButton {
+  display: none;
 }
 
 #AantalSection {
   padding-top: 1em;
   padding-bottom: 1em;
-}
-
-#banner {
-  width: 126%;
-  margin-left: -2em;
+  color: white;
   margin-top: -1em;
-}
-
-#banner-text {
-  margin-top: -1em;
-  text-align: center;
-  background-color: white;
-  width: 15em;
-  margin-left: -1em;
-  font-size: 1.88em;
-  color: black;
+  margin-bottom: -0.5em;
 }
 
 #styleText {
@@ -74,70 +106,108 @@ label {
   color: hotpink;
 }
 
-#AantalSection {
+#weather {
+  position: absolute;
+  top: 1.81em;
+  right: 3.94em;
   color: white;
-  margin-top: -1em;
-  margin-top: -1em;
-  margin-bottom: -0.5em;
-}
-
-button {
-  width: 107%;
-  height: 3em;
-  color: hotpink;
   font-weight: bold;
-  font-size: 1em;
 }
 
-#doorgaanButton {
-  display: none;
+#weatherIcon {
+  position: absolute;
+  top: -14em;
+  right: 1.25em;
+  width: 5em;
+  transform: scale(0.1);
 }
 
-/* matched pagina */
+.gekozen {
+  overflow: hidden;
+}
 
-#match-text {
+.gekozen > p:first-child {
   color: black;
+  text-align: center;
   background-color: white;
   padding: 1em;
-  margin-left: -1em;
-  width: 23em;
 }
 
-#selectedImagesContainer {
+.gekozen > div {
   display: flex;
-  grid-gap: 1em;
-  height: 20.81em;
-  overflow: auto;
-  margin-top: 3em;
-}
-
-#selectedImagesContainer>img {
   background-color: white;
   padding: 0.5em;
   border-radius: 2em;
+  overflow: auto;
+}
+
+.gekozen > div > p {
+  color: hotpink;
+  font-size: 1.5em;
+}
+
+.gekozen > section > h2 {
+  display: none;
+}
+
+#selectedImagesContainer > img {
+  padding: 0.5em;
+  border-radius: 2em;
+  height: 20.81em;
 }
 
 #javascript-disabled {
   color: deeppink;
+  text-align: center;
 }
 
 #images {
-  grid-template-columns: 1fr 1fr;
-  grid-gap: -3em;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: -3em;
 }
 
-#images>img {
+#images > img {
   width: 90%;
   height: 90%;
   background-color: white;
   padding: 0.5em;
 }
 
-/* error page */
-#error{
-  background-image: url(404.jpg);
-  background-repeat: no-repeat;
-  background-size: 24em;
-  background-color: #CCCCCC;
+.page-not-found > section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-not-found > section > h1 {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+}
+
+.page-not-found > section > button {
+  all: unset;
+  width: 30em;
+  height: 40em;
+  border: solid black 4px;
+  background-color: white;
+  opacity: 0%;
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.page-not-found > section > a {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 23em;
+  height: 9.3em;
 }

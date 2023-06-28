@@ -1,50 +1,82 @@
-
-<head>
+<header>
   <h1>Style sync</h1>
-</head>
-<main>
+</header>
 
-   <img id="banner" src="banner.png" alt="image mode">
-    <p id="banner-text">Find your style!</p>
+<main class="home">
+  <section>
+    <h2>Section 1</h2>
+    <img src=".././images/banner.png" alt="image banner" />
+    <p>Find your style!</p>
+  </section>
 
-    <p>Do you want to find the perfect store for your style? Choose the ones that you are interested in and get differet stores where you can explore!</p>
+  <section>
+    <h2>Section 2</h2>
+    <p>Do you want to find the perfect store for your style? Choose the ones
+      that you are interested in and get different stores where you can explore!</p>
+  </section>
 
-<div id="imageContainer">
-  <img id="image" src="">
-</div>
-<div id="checkboxes">
-  <label>
-    <input type="checkbox" value="Streetwear" id="streetwearCheckbox" class="hashtag-checkbox"> Streetwear
-  </label>
-<label>
-  <input type="checkbox" value="Vintage" id="vintageCheckbox" class="hashtag-checkbox"> Vintage
-</label>
-<label>
-  <input type="checkbox" value="Kawaii" id="kawaiiCheckbox" class="hashtag-checkbox"> Kawaii
-</label>
-<div id="AantalSection">
-  <p id="styleText">Choose a style</p>
-</div>
+  <section>
+    <h2>Section 3</h2>
+    <fieldset>
+      <legend>Choose a style</legend>
 
-</div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            value="Streetwear"
+            id="streetwearCheckbox"
+            class="hashtag-checkbox"
+          />
+          Streetwear
+        </label>
+        <button id="favorite-button-64668216af3c1ff8da32c2c0">Favorite</button>
+      </div>
 
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            value="Vintage"
+            id="vintageCheckbox"
+            class="hashtag-checkbox"
+          />
+          Vintage
+        </label>
+        <button id="favorite-button-646684b3af3c1ff8da32c2c2">Favorite</button>
+      </div>
 
-<a>
-<button id="doorgaanButton">Next</button>
-</a>
-<a href="./gekozen"> 
-<button id="javascript-disabled-button">Next</button>
-</a>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            value="Kawaii"
+            id="kawaiiCheckbox"
+            class="hashtag-checkbox"
+          />
+          Kawaii
+        </label>
+        <button id="favorite-button-64665ff5af3c1ff8da32c2bd">Favorite</button>
+      </div>
+    </fieldset>
 
-{{!-- voor de api --}}
+    <div id="AantalSection">
+      <p id="styleText">Choose a style</p>
+    </div>
+  </section>
 
-<div id="weatherIcon"> </div>
-<div id="weather"> </div>
-<script src="index.js"></script>
-
+  <section>
+    <h2>Section 4</h2>
+    <a href="#" id="doorgaanButton">Next</a>
+    <a href="./gekozen" id="javascript-disabled-button">Next</a>
+  </section>
 </main>
 
-    <footer></footer> 
+<aside>
+  <span id="weatherIcon"></span>
+  <span id="weather"></span>
+</aside>
 
+<script src="index.js"></script>
 
-
+<footer></footer>
