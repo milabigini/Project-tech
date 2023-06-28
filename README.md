@@ -6,15 +6,6 @@ Gebruiker wil of heeft een bepaalde stijl die hij verder wil gaan ontwikkelen. D
 ## Uitgewerkte requirement
 De gebruiker kiest uit een lijst met hashtags, uit de gekozen hashtags komt er een swipe functie met winkels die de zelfde hashtags hebben.
 
-## Licentie
-
-ISC License
-Copyright 2023 Mila Bigini
-
-Toestemming om deze software te gebruiken, te kopiëren, te wijzigen en/of te verspreiden voor welk doel dan ook, met of zonder vergoeding, wordt hierbij verleend, op voorwaarde dat de bovenstaande copyrightmelding en deze toestemmingsmelding in alle kopieën voorkomen.
-
-DE SOFTWARE WORDT GELEVERD "ZOALS HIJ IS" EN DE AUTEUR WIJST ALLE GARANTIES MET BETREKKING TOT DEZE SOFTWARE AF, INCLUSIEF ALLE IMPLICIETE GARANTIES VAN VERKOOPBAARHEID EN GESCHIKTHEID. IN GEEN GEVAL IS DE AUTEUR AANSPRAKELIJK VOOR ENIGE SPECIALE, DIRECTE, INDIRECTE OF GEVOLGSCHADE OF WELKE SCHADE DAN OOK ALS GEVOLG VAN VERLIES VAN GEBRUIK, GEGEVENS OF WINST, HETZIJ IN EEN CONTRACTUELE HANDELING, NALATIGHEID OF ANDERE ONRECHTMATIGE DAAD, VOORTVLOEIEND UIT OF IN VERBAND MET HET GEBRUIK OF DE PRESTATIES VAN DEZE SOFTWARE.
-
 ## Mijn aplicatie
 Dit is de eerste pagina die de gebruiker zal zien. Rechtsboven in staat eeb weather api zodat de gebruiker kan zien wat voor weer het is.
 <img width="785" alt="Schermafbeelding 2023-05-25 om 13 22 44" src="https://github.com/milabigini/Project-tech/assets/92277795/e9887d69-50f9-4b01-b191-2fbdb53b14ec">
