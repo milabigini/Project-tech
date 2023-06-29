@@ -46,6 +46,9 @@ The application will be accessible at http://localhost:3000.
 ## Mijn aplicatie
 
 ## Sources
+* GeeksforGeeks. (2020). Difference between ES5 and ES6. GeeksforGeeks. https://www.geeksforgeeks.org/difference-between-es5-and-es6/
+* Negi, M. S. (2019, 28 januari). ES5 vs ES6 ( With example code ) - recraftrelic - Medium. Medium. https://medium.com/recraftrelic/es5-vs-es6-with-example-code-9901fa0136fc
+* ES5 vs ES6 - javatpoint. (z.d.). www.javatpoint.com. https://www.javatpoint.com/es5-vs-es6
 * Wikipedia-bijdragers. (2023). Application programming interface. Wikipedia. https://nl.wikipedia.org/wiki/Application_programming_interface
 * Frits. (2022). Wat is een API? DLogic Webdesign in Breda. https://dlogic.nl/wat-is-een-api/
 * Handlebars. (z.d.). https://handlebarsjs.com/
