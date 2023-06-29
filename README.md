@@ -57,5 +57,11 @@ The application will be accessible at http://localhost:3000.
 * DataTables example - Custom form layout / templates (tags). (z.d.). https://editor.datatables.net/examples/simple/template.html
 * Wikipedia contributors. (2023). MongoDB. Wikipedia. https://en.wikipedia.org/wiki/MongoDB
 * Gillis, A. S., & Botelho, B. (2023). MongoDB. Data Management. https://www.techtarget.com/searchdatamanagement/definition/MongoDBFind and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter. (2023, 16 juni). https://eslint.org/
+* Hello World - GitHub Docs. (z.d.). GitHub Docs. https://docs.github.com/en/get-started/quickstart/hello-world
+* https://blog.hubspot.com/website/what-is-github-used-for#:~:text=It%20makes%20it%20easy%20for,collaborate%2C%20and%20pitch%20their%20work.
+* Progressive Enhancement - MDN Web Docs Glossary: Definitions of Web-related terms | MDN. (2023, 8 juni). https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+* Progressive Enhancement: What It Is, And How To Use It? — Smashing Magazine. (2009, 22 april). Smashing Magazine. https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/
+* Wikipedia contributors. (2023a). Progressive enhancement. Wikipedia. https://en.wikipedia.org/wiki/Progressive_enhancement
+  
 ## Acknowledgments
 Mila Bigini
