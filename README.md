@@ -27,6 +27,7 @@ ESLint
 npm
 
 ## Target Audience
+Mijn doelgroep zijn jongeren/ jong volwassenen die hun eigen stijl verder willen uitbreiden en moeite hebben om winkels te zoeken die hun style hebben. Jongeren en jong volwassene zitten in de bloei om hun zelf verder te gaan ontwikkelen en hun emoties te uiten met creativiteit en gevoel. Ik heb 3 jongeren gesproken die een eigen stijl hebben en niet zo goed weten waar ze moeten kijken.
 
 ## Installation
 Clone the repository:
