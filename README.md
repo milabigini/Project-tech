@@ -11,12 +11,19 @@ De gebruiker kiest uit een lijst met hashtags, uit de gekozen hashtags komt er e
 
 ## Tools
 Node.js
+
 nodemon
+
 Express/Express-Handlebars
+
 CSS
+
 JavaScript
+
 MongoDB/Mongoose
+
 ESLint
+
 npm
 
 ## Target Audience
